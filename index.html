@@ -186,7 +186,7 @@ const DATA = {
   .nav-right { display: flex; align-items: center; gap: 20px; }
   .nav-link { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--black); text-decoration: none; text-transform: uppercase; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
   .nav-link:hover { border-color: var(--purple); }
-  .nav-cta { font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.15em; color: var(--white); background: var(--purple); padding: 9px 20px; text-decoration: none; border: var(--stroke); box-shadow: 3px 3px 0 var(--black); text-transform: uppercase; transition: transform 0.15s, box-shadow 0.15s;white-space: nowrap }
+  .nav-cta { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; color: var(--white); background: var(--purple); padding: 9px 20px; text-decoration: none; border: var(--stroke); box-shadow: 3px 3px 0 var(--black); text-transform: uppercase; transition: transform 0.15s, box-shadow 0.15s; }
   .nav-cta:hover { transform: translate(-2px,-2px); box-shadow: 5px 5px 0 var(--black); }
 
   /* HERO */
@@ -291,7 +291,7 @@ const DATA = {
   .proj-title { font-family: 'Noto Sans TC', sans-serif; font-size: 16px; font-weight: 700; margin-bottom: 4px; color: var(--black); transition: color 0.2s; }
   .proj-card:hover .proj-title { color: var(--purple-dark); }
   .proj-sub { font-size: 11px; color: rgba(26,10,46,0.35); font-family: 'Space Mono', monospace; letter-spacing: 0.06em; }
-  .proj-badge { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.1em; padding: 6px 14px; background: var(--yellow); border: 1.5px solid var(--black); color: var(--black); white-space: nowrap; flex-shrink: 0; font-weight: 700; text-transform: uppercase; }
+  .proj-badge { font-family: 'Space Mono', monospace; font-size: 8px; letter-spacing: 0.1em; padding: 4px 10px; background: var(--yellow); border: 1.5px solid var(--black); color: var(--black); white-space: nowrap; flex-shrink: 0; font-weight: 700; text-transform: uppercase; }
   .proj-body { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
   .proj-body.open { max-height: 1200px; }
   .proj-inner { padding: 20px 20px 28px; border-top: 1.5px solid rgba(26,10,46,0.08); display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -318,7 +318,28 @@ const DATA = {
   .proj-tags { grid-column: 1/-1; display: flex; flex-wrap: wrap; gap: 6px; padding-top: 4px; }
   .ptag { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 0.1em; padding: 5px 10px; background: var(--pink-light); border: 1.5px solid var(--black); color: var(--black); font-weight: 700; text-transform: uppercase; }
 
-  /* CONTACT */
+  /* REELS */
+  .reels-wrap { padding: 100px 48px; background: var(--white); border-top: var(--stroke); position: relative; z-index: 1; }
+  .reels-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+  .reel-card { text-decoration: none; display: flex; flex-direction: column; gap: 8px; transition: transform 0.2s; }
+  .reel-card:hover { transform: translate(-2px,-2px); }
+  .reel-thumb { position: relative; border: var(--stroke); box-shadow: 4px 4px 0 var(--black); overflow: hidden; aspect-ratio: 9/16; background: var(--purple-light); }
+  .reel-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.2s; }
+  .reel-card:hover .reel-thumb img { opacity: 0.7; }
+  .reel-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--white); opacity: 0; transition: opacity 0.2s; background: rgba(123,47,255,0.4); }
+  .reel-card:hover .reel-play { opacity: 1; }
+  .reel-label { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: rgba(26,10,46,0.4); text-align: center; }
+
+  /* TOOLS */
+  .tools-wrap { padding: 80px 48px; background: var(--bg); border-top: var(--stroke); position: relative; z-index: 1; }
+  .tools-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+  .tool-item { font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; padding: 10px 20px; border: var(--stroke); box-shadow: 3px 3px 0 var(--black); text-transform: uppercase; transition: transform 0.15s, box-shadow 0.15s; }
+  .tool-item:hover { transform: translate(-2px,-2px); box-shadow: 5px 5px 0 var(--black); }
+  .tool-item.color-purple { background: var(--purple-light); color: var(--purple-dark); }
+  .tool-item.color-pink { background: var(--pink-light); color: var(--pink); }
+  .tool-item.color-yellow { background: var(--yellow); color: var(--black); }
+
+  /* REELS MOBILE */
   .contact-wrap { position: relative; z-index: 1; overflow: hidden; padding: 100px 48px; background: linear-gradient(135deg, var(--purple) 0%, #A855F7 100%); border-top: var(--stroke); }
   .contact-stars { position: absolute; top: 20px; right: 60px; font-size: 48px; color: var(--yellow); -webkit-text-stroke: 2px var(--black); animation: twinkle 2s ease-in-out infinite; user-select: none; }
   .contact-circle-deco { position: absolute; bottom: -120px; right: -80px; width: 400px; height: 400px; border-radius: 50%; border: 60px solid rgba(255,255,255,0.1); }
@@ -343,7 +364,6 @@ const DATA = {
 
   @media (max-width: 768px) {
     nav { padding: 14px 24px; }
-    .nav-cta {font-size: 16px;}
     .hero { padding: 90px 24px 48px; }
     .hero-bottom { grid-template-columns: 1fr; }
     .hero-photo-wrap { display: none; }
@@ -354,6 +374,9 @@ const DATA = {
     .skills-wrap { padding: 80px 24px; }
     .skills-grid { grid-template-columns: 1fr; gap: 12px; }
     .proj-inner { grid-template-columns: 1fr; }
+    .reels-wrap { padding: 80px 24px; }
+    .reels-grid { grid-template-columns: repeat(2,1fr); }
+    .tools-wrap { padding: 60px 24px; }
     .contact-wrap { padding: 80px 24px; }
     .contact-footer { flex-direction: column; gap: 16px; align-items: flex-start; }
   }
@@ -425,6 +448,56 @@ const DATA = {
     <div class="section-count" id="section-count"></div>
   </div>
   <div class="skills-grid" id="skills-grid"></div>
+</div>
+
+<!-- REELS SECTION -->
+<div class="reels-wrap reveal">
+  <div class="section-header">
+    <div class="section-title-wrap">
+      <div class="section-title">影音作品</div>
+      <span class="section-star">✦</span>
+    </div>
+    <div class="section-count">4 REELS</div>
+  </div>
+  <div class="reels-grid">
+    <a class="reel-card" href="https://www.instagram.com/reel/CsSu5jAv-AE/" target="_blank">
+      <div class="reel-thumb"><img src="ree1.png" alt="Reel 1"><div class="reel-play">▶</div></div>
+      <div class="reel-label">REEL 01</div>
+    </a>
+    <a class="reel-card" href="https://www.instagram.com/reel/DNIRcr_TlnF/" target="_blank">
+      <div class="reel-thumb"><img src="ree2.png" alt="Reel 2"><div class="reel-play">▶</div></div>
+      <div class="reel-label">REEL 02</div>
+    </a>
+    <a class="reel-card" href="https://www.instagram.com/reel/DNqHRC4T3jj/" target="_blank">
+      <div class="reel-thumb"><img src="ree3.png" alt="Reel 3"><div class="reel-play">▶</div></div>
+      <div class="reel-label">REEL 03</div>
+    </a>
+    <a class="reel-card" href="https://www.instagram.com/reel/DMXKQCMyhaP/" target="_blank">
+      <div class="reel-thumb"><img src="ree4.png" alt="Reel 4"><div class="reel-play">▶</div></div>
+      <div class="reel-label">REEL 04</div>
+    </a>
+  </div>
+</div>
+
+<!-- TOOLS SECTION -->
+<div class="tools-wrap reveal">
+  <div class="section-header">
+    <div class="section-title-wrap">
+      <div class="section-title">工具 & 技能</div>
+      <span class="section-star">◆</span>
+    </div>
+  </div>
+  <div class="tools-grid">
+    <div class="tool-item color-purple">Meta Ads Manager</div>
+    <div class="tool-item color-pink">Canva</div>
+    <div class="tool-item color-yellow">Line OA</div>
+    <div class="tool-item color-purple">CapCut / 剪映</div>
+    <div class="tool-item color-pink">Notion</div>
+    <div class="tool-item color-yellow">AI 生成工具</div>
+    <div class="tool-item color-purple">AI 音樂生成</div>
+    <div class="tool-item color-pink">AI 圖像生成</div>
+    <div class="tool-item color-yellow">Google Analytics <span style="font-size:10px;opacity:0.6">（學習中）</span></div>
+  </div>
 </div>
 
 <div class="contact-wrap reveal">
@@ -525,4 +598,3 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.le
 </script>
 </body>
 </html>
-
