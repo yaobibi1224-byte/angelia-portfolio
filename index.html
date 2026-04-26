@@ -47,16 +47,16 @@ const DATA = {
           ],
           news: "https://www.rti.org.tw/news?uid=3&pid=50065",
           tags: ["整合行銷", "CONCEPT PLANNING", "SOCIAL STRATEGY", "EVENT EXECUTION", "BRAND STORYTELLING"],
-          photos: ["b5.jpg", "b1.jpg", "b2.jpg", "b3.jpg", "b4.jpg"],
+          photos: ["b5.jpg", "b1.JPG", "b2.JPG", "b3.JPG", "b4.JPG"],
           photo_captions: ["主視覺海報", "活動現場", "演出實況", "螢光派對", "市集現場"],
         },
         {
           title: "口碑行銷",
-          sub: "阮劇團 ｜ 2024—2026",
+          sub: "阮劇團 ｜ 2021—2024",
           type: "口碑策略",
           desc: "以議題轉譯與趣味切角策劃社群口碑活動，引導受眾主動在Threads、Instagram等平台產出UGC內容，形成自發性擴散。透過「備胎冠軍投稿大賽」等互動企劃，讓品牌話題突破既有粉絲圈，觸及陌生受眾，建立品牌與年輕族群的情感共鳴。",
           metrics: [
-            { label: "執行年資", val: "2年" },
+            { label: "執行年資", val: "3年" },
             { label: "擴散平台", val: "Threads / IG" },
           ],
           tags: ["社群擴散", "VIRAL STRATEGY", "COMMUNITY ACTIVATION", "WORD OF MOUTH"],
@@ -65,7 +65,7 @@ const DATA = {
         },
         {
           title: "社群內容經營",
-          sub: "阮劇團 ｜ 2022—2026",
+          sub: "阮劇團 ｜ 2021—2024",
           type: "社群策略",
           desc: "負責品牌Facebook／Instagram社群帳號日常內容規劃與文案撰寫，依據演出調性設計貼文節奏，以潮流語言與創意切角提升互動率。同步經營Line官方帳號，從零建立會員溝通機制，定期推播活動資訊與會員專屬內容，累積品牌忠實受眾。",
           metrics: [
@@ -88,7 +88,7 @@ const DATA = {
       projects: [
         {
           title: "廣告投放優化",
-          sub: "阮劇團系列演出（含劇本農場12）｜ 2025—2026",
+          sub: "阮劇團系列演出（含劇本農場12）｜ 2023—2024",
           type: "數位廣告策略",
           desc: "自學 Facebook／Instagram 廣告投放，針對不同演出目標設計分眾廣告策略，涵蓋品牌曝光、互動導流與票務轉換。透過多組素材A/B測試持續迭代，自主撰寫成效分析報告並提出優化建議。在有限預算下達成高效觸及，廣告互動成本最低控制在NT$0.1，連結點擊成本最低NT$0.5，CTR最高達15.8%。",
           metrics: [
@@ -111,7 +111,7 @@ const DATA = {
       projects: [
         {
           title: "線下活動導流",
-          sub: "阮劇團 ｜ 2023—2026",
+          sub: "阮劇團 ｜ 2022—2024",
           type: "O2O導流",
           desc: "負責線下活動會員攤位企劃與體驗流程設計，從攤位視覺、互動機制到工作人員流程全程規劃執行。整合線下接觸點與線上會員系統，設計引導民眾加入Line官方帳號的體驗流程，打造完整O2O導流機制。單檔專案透過線下攤位引流，成功為線上平台新增690位會員。",
           metrics: [
@@ -124,12 +124,12 @@ const DATA = {
         },
         {
           title: "Line CRM經營",
-          sub: "阮劇團 ｜ 2024—2026",
+          sub: "阮劇團 ｜ 2022—2024",
           type: "CRM經營",
           desc: "從零規劃並建立Line官方帳號會員經營機制，設計會員回饋流程、推播策略與訊息溝通節奏。結合活動節點定期推送專屬內容，維持會員黏著度。歷時兩年將Line會員從0成長至3,558位，建立品牌與受眾之間穩定的溝通管道。",
           metrics: [
             { label: "經營平台", val: "Line OA" },
-            { label: "執行年資", val: "3年" },
+            { label: "執行年資", val: "2年" },
           ],
           tags: ["會員溝通", "CRM STRATEGY", "LINE OA", "MEMBER RETENTION", "MEMBER JOURNEY"],
           photos: [""],
@@ -137,7 +137,7 @@ const DATA = {
         },
         {
           title: "心理測驗企劃 × PM",
-          sub: "阮劇團 ｜ 2025",
+          sub: "阮劇團 ｜ 2023",
           type: "內容企劃",
           desc: "企劃並主導線上互動心理測驗，從題目設計、結果文案撰寫到上線流程全程PM。結合品牌主題與社群傳播邏輯，設計具高分享性的互動內容。上線後吸引2,929次瀏覽，完成填答1,717人，完成率高達93.52%，平均作答時間近2分鐘，有效提升受眾與品牌的互動黏著度。",
           metrics: [
@@ -365,9 +365,10 @@ const DATA = {
     .nav-cta { font-size: 14px; padding: 8px 14px; }
     .hero { padding: 90px 24px 48px; }
     .hero-bottom { grid-template-columns: 1fr; }
-    .hero-photo-wrap { display: flex; margin-top: 16px; }
+    .hero-photo-wrap { display: flex; align-items: center; justify-content: center; margin-top: 8px; }
+    .hero-photo { width: 50vw; height: 62vw; max-width: 200px; max-height: 250px; }
     .hero-left { width: 100%; }
-    .hero-tags-wrap { justify-content: flex-start; }
+    .hero-tags-wrap { justify-content: center; }
     .stats-wrap { grid-template-columns: repeat(2,1fr); }
     .stat-item { border-right: none; border-bottom: var(--stroke); padding: 36px 24px; }
     .skills-wrap { padding: 80px 24px; }
@@ -421,11 +422,11 @@ const DATA = {
   <div class="hero-bottom">
     <div class="hero-left">
       <div class="hero-bio-box"><p id="hero-bio"></p></div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo" id="hero-photo"></div>
+        <div class="hero-photo-label">ANGELIA</div>
+      </div>
       <div class="hero-tags-wrap" id="hero-tags"></div>
-    </div>
-    <div class="hero-photo-wrap">
-      <div class="hero-photo" id="hero-photo"></div>
-      <div class="hero-photo-label">ANGELIA</div>
     </div>
   </div>
 </section>
