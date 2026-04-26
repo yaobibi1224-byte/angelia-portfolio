@@ -365,10 +365,11 @@ const DATA = {
     .nav-cta { font-size: 14px; padding: 8px 14px; }
     .hero { padding: 90px 24px 48px; }
     .hero-bottom { grid-template-columns: 1fr; }
-    .hero-photo-wrap { display: flex; align-items: center; justify-content: center; margin-top: 8px; }
+    .hero-left { display: flex; flex-direction: column; gap: 20px; }
+    .hero-photo-wrap { display: flex; align-items: center; justify-content: center; order: 2; }
     .hero-photo { width: 50vw; height: 62vw; max-width: 200px; max-height: 250px; }
-    .hero-left { width: 100%; }
-    .hero-tags-wrap { justify-content: center; }
+    .hero-tags-wrap { justify-content: center; order: 3; }
+    .hero-bio-box { order: 1; }
     .stats-wrap { grid-template-columns: repeat(2,1fr); }
     .stat-item { border-right: none; border-bottom: var(--stroke); padding: 36px 24px; }
     .skills-wrap { padding: 80px 24px; }
@@ -422,11 +423,11 @@ const DATA = {
   <div class="hero-bottom">
     <div class="hero-left">
       <div class="hero-bio-box"><p id="hero-bio"></p></div>
-      <div class="hero-photo-wrap">
-        <div class="hero-photo" id="hero-photo"></div>
-        <div class="hero-photo-label">ANGELIA</div>
-      </div>
       <div class="hero-tags-wrap" id="hero-tags"></div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo" id="hero-photo"></div>
+      <div class="hero-photo-label">ANGELIA</div>
     </div>
   </div>
 </section>
